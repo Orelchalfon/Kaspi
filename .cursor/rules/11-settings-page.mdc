@@ -1,0 +1,47 @@
+---
+description: Kaspi settings page rules
+globs:
+  - "app/dashboard/settings/**"
+  - "components/dashboard/**"
+  - "components/shared/**"
+  - "lib/**"
+alwaysApply: false
+---
+
+# Phase 11 — Settings Page
+
+This phase is only for `/dashboard/settings`.
+
+## Allowed scope
+- Build a tabbed settings page using shadcn Tabs
+- Tabs required:
+  - General
+  - Notifications
+  - Team
+  - Billing
+- Add local-only forms using react-hook-form + zod
+- Add notification toggles
+- Add a danger zone section with destructive styling
+- Add skeleton loading state
+- Add empty state
+
+## Requirements
+- Validation can run locally only
+- No submission to backend
+- No billing integrations
+- No auth account management
+- All text comes from the dictionary
+- Support RTL, dark mode, and responsive layout
+
+## Do not do in this phase
+- Do not add real persistence
+- Do not add APIs
+- Do not add Stripe
+- Do not build unrelated pages
+
+## Success criteria
+- Tabs work correctly
+- Forms validate locally
+- Toggles and danger zone feel polished
+- Page is responsive, RTL-correct, and visually complete
+

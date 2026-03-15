@@ -1,0 +1,49 @@
+---
+description: Kaspi overview page rules
+globs:
+  - "app/dashboard/overview/**"
+  - "components/dashboard/**"
+  - "components/shared/**"
+  - "components/charts/**"
+  - "lib/**"
+alwaysApply: false
+---
+
+# Phase 06 — Overview Page
+
+This phase is only for `/dashboard/overview`.
+
+## Allowed scope
+- Build the overview page layout
+- Add 4 stat cards:
+  - Total Families
+  - Active Children
+  - Tasks This Week
+  - MRR
+- Add a Recharts line chart with 6 months of mock analytics
+- Add a recent activity feed derived from seeded transactions
+- Add skeleton loading state
+- Add empty state
+- Add responsive behavior down to 375px
+- Use shared components wherever possible
+
+## Requirements
+- All visible text must come from the dictionary
+- Analytics data must be typed
+- Do not hardcode analytics arrays directly in the page if they belong in seed/helpers
+- Use subtle Framer Motion stagger/entrance animations
+- Keep the layout visually strong and SaaS-like
+
+## Do not do in this phase
+- Do not build other dashboard pages
+- Do not add real analytics APIs
+- Do not add backend logic
+- Do not introduce unrelated page-specific components unless truly necessary
+
+## Success criteria
+- Overview page is complete and polished
+- All data comes from seed/helpers only
+- Chart renders correctly
+- Recent activity is readable and visually clean
+- Page is responsive, RTL-correct, and dark-mode compatible
+

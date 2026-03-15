@@ -1,14 +1,13 @@
-import { Geist, Geist_Mono, Noto_Sans } from "next/font/google"
-
-import "@workspace/ui/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@workspace/ui/lib/utils";
+import "@workspace/ui/globals.css"
+import { cn } from "@workspace/ui/lib/utils"
+import { Heebo } from "next/font/google"
 
-const notoSans = Noto_Sans({variable:'--font-sans'})
-
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
+const heebo = Heebo({
+  subsets: ["latin", "hebrew"],
+  variable: "--font-sans",
+  display: "swap",       // show fallback text instantly while font loads
+  preload: true,
 })
 
 export default function RootLayout({
@@ -18,11 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="he"
+      dir="rtl"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", notoSans.variable)}
+      className={cn("antialiased", heebo.variable)}
     >
-      <body>
+      <body className="font-sans">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

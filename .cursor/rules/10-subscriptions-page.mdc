@@ -1,0 +1,52 @@
+---
+description: Kaspi subscriptions page rules
+globs:
+  - "app/dashboard/subscriptions/**"
+  - "components/dashboard/**"
+  - "components/shared/**"
+  - "lib/**"
+alwaysApply: false
+---
+
+# Phase 10 — Subscriptions Page
+
+This phase is only for `/dashboard/subscriptions`.
+
+## Allowed scope
+- Build summary cards for:
+  - Total MRR
+  - Active Subs
+  - Churned This Month
+- Build a subscriptions table
+- Show:
+  - family name
+  - plan
+  - status
+  - billing date
+  - amount
+- Add local-only action buttons:
+  - Cancel
+  - Upgrade
+  - Downgrade
+- Add skeleton loading state
+- Add empty state
+
+## Requirements
+- Use seeded subscriptions and derived summary data only
+- Actions are UI-only and local-only
+- No Stripe logic
+- Keep table and summary cards visually cohesive
+- Support RTL, dark mode, and responsive layout
+
+## Do not do in this phase
+- Do not add Stripe
+- Do not add billing APIs
+- Do not add persistence
+- Do not build unrelated dashboard pages
+
+## Success criteria
+- Summary cards are clear and well-designed
+- Table is polished and readable
+- Buttons behave as local-only interactions
+- Page is responsive, RTL-correct, and consistent with the rest of the dashboard
+

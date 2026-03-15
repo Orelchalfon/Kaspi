@@ -1,0 +1,47 @@
+---
+description: Kaspi education page rules
+globs:
+  - "app/dashboard/education/**"
+  - "components/dashboard/**"
+  - "components/shared/**"
+  - "lib/**"
+alwaysApply: false
+---
+
+# Phase 09 — Education Page
+
+This phase is only for `/dashboard/education`.
+
+## Allowed scope
+- Build a responsive education content grid
+- Use seeded education content only
+- Each card should display:
+  - type icon
+  - title
+  - subject tag
+  - reward points
+- Add an Assign to Child button
+- Open a popover with child selector
+- Add a progress tracker section
+- Show completion rate per child with horizontal progress bars
+- Add skeleton loading state
+- Add empty state
+
+## Requirements
+- Assignment interactions must be local-only
+- Do not persist anything
+- Keep the page visually engaging and child/family-friendly
+- Use shared components and consistent design patterns
+- Support RTL and dark mode
+
+## Do not do in this phase
+- Do not add backend assignment logic
+- Do not add APIs
+- Do not build unrelated dashboard pages
+
+## Success criteria
+- Education cards feel polished and consistent
+- Popover interaction works locally
+- Progress section is clear and visually useful
+- Page is responsive, RTL-correct, and production-looking
+

@@ -1,0 +1,51 @@
+---
+description: Kaspi families page rules
+globs:
+  - "app/dashboard/families/**"
+  - "components/dashboard/**"
+  - "components/shared/**"
+  - "lib/**"
+alwaysApply: false
+---
+
+# Phase 07 — Families Page
+
+This phase is only for `/dashboard/families`.
+
+## Allowed scope
+- Build a production-style families page
+- Add a searchable and filterable table
+- Add columns:
+  - Family Name
+  - Parent Email
+  - Number of Children
+  - Plan
+  - Joined
+  - Status
+- Add search input
+- Add plan filter dropdown
+- Make table rows clickable
+- Open a Sheet when a row is clicked
+- Show child profiles in the Sheet using seeded family/user data
+- Add skeleton loading state
+- Add empty state
+
+## Requirements
+- Use local state only for search/filter UI
+- Derive all displayed data from `seedFamilies` and `seedUsers`
+- Keep the page visually polished, not like a default data table demo
+- Maintain RTL correctness and responsive behavior
+
+## Do not do in this phase
+- Do not add backend search or filtering
+- Do not add real persistence
+- Do not build other dashboard pages
+- Do not fetch from APIs
+
+## Success criteria
+- Search works locally in memory
+- Plan filter works locally in memory
+- Clicking a row opens the correct child profiles
+- Table and Sheet feel consistent with the Kaspi design system
+- Page is responsive, polished, and dark-mode compatible
+
