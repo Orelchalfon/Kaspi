@@ -7,7 +7,7 @@ type PageProps = {
 }
 
 export default function Page({ searchParams }: PageProps) {
-  const { lang: qpLang } = use(searchParams)  // ← use() לפתוח את ה-Promise
+  const { lang: qpLang } = use(searchParams)   // ← use() לפתוח את ה-Promise
 
   const lang: SupportedLandingLanguage =
     qpLang === "en" || qpLang === "he" ? qpLang : "he"

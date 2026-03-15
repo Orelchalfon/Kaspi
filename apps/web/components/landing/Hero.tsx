@@ -18,7 +18,7 @@ export function Hero({ dictionary }: HeroProps) {
       id="hero"
       className="relative flex min-h-[80vh] items-center justify-center px-4 pb-16 pt-28"
     >
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.18),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(15,23,42,0.9),_#020617)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.18),transparent_55%),radial-gradient(circle_at_bottom,rgba(15,23,42,0.9),#020617)]" />
 
       <div className="mx-auto flex w-full max-w-6xl flex-col items-stretch gap-10 lg:flex-row lg:items-center">
         <div className="flex-1 space-y-6">
@@ -96,7 +96,7 @@ export function Hero({ dictionary }: HeroProps) {
                 <p className="text-[11px] font-medium text-muted-foreground">
                   מגמת תזרים חודשי
                 </p>
-                <div className="h-24 rounded-xl bg-gradient-to-b from-slate-900 via-slate-950 to-black p-3">
+                <div className="h-24 rounded-xl bg-linear-to-b from-slate-900 via-slate-950 to-black p-3">
                   <div className="flex h-full items-end gap-1">
                     <div className="h-[20%] flex-1 rounded-t-sm bg-slate-700/80" />
                     <div className="h-[45%] flex-1 rounded-t-sm bg-slate-600/80" />
