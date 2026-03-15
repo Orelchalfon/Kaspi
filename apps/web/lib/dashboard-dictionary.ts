@@ -66,9 +66,47 @@ export type DashboardDictionary = {
             description: string
         }
     }
+    tasks: {
+        pageTitle: string
+        pendingApproval: string
+        activeTasks: string
+        completedTasks: string
+        createTask: string
+        reward: string
+        dueDate: string
+        approve: string
+        reject: string
+        categories: {
+            chores: string
+            school: string
+            habits: string
+            education: string
+        }
+        statuses: {
+            pending: string
+            approved: string
+            completed: string
+            rejected: string
+        }
+        dialog: {
+            title: string
+            taskTitle: string
+            taskTitlePlaceholder: string
+            child: string
+            childPlaceholder: string
+            rewardAmount: string
+            dueDateLabel: string
+            category: string
+            submit: string
+            cancel: string
+        }
+        empty: {
+            title: string
+            description: string
+        }
+    }
 }
 
-/* ── Hebrew ────────────────────────────────────────────── */
 
 const he: DashboardDictionary = {
     overview: {
@@ -134,6 +172,45 @@ const he: DashboardDictionary = {
         noResults: {
             title: "לא נמצאו תוצאות",
             description: "נסה לחפש במילים אחרות או לשנות את הסינון.",
+        },
+    },
+    tasks: {
+        pageTitle: "משימות",
+        pendingApproval: "ממתינות לאישור",
+        activeTasks: "משימות פעילות",
+        completedTasks: "משימות שהושלמו",
+        createTask: "משימה חדשה",
+        reward: "תגמול",
+        dueDate: "תאריך יעד",
+        approve: "אישור",
+        reject: "דחייה",
+        categories: {
+            chores: "מטלות בית",
+            school: "לימודים",
+            habits: "הרגלים",
+            education: "חינוך פיננסי",
+        },
+        statuses: {
+            pending: "ממתין",
+            approved: "מאושר",
+            completed: "הושלם",
+            rejected: "נדחה",
+        },
+        dialog: {
+            title: "יצירת משימה חדשה",
+            taskTitle: "שם המשימה",
+            taskTitlePlaceholder: "לדוגמה: סידור החדר",
+            child: "ילד/ה",
+            childPlaceholder: "בחר ילד/ה",
+            rewardAmount: "סכום תגמול (₪)",
+            dueDateLabel: "תאריך יעד",
+            category: "קטגוריה",
+            submit: "יצירת משימה",
+            cancel: "ביטול",
+        },
+        empty: {
+            title: "אין משימות עדיין",
+            description: "צור משימה חדשה כדי להתחיל.",
         },
     },
 }
@@ -204,6 +281,45 @@ const en: DashboardDictionary = {
         noResults: {
             title: "No results found",
             description: "Try a different search term or adjust your filters.",
+        },
+    },
+    tasks: {
+        pageTitle: "Tasks",
+        pendingApproval: "Pending Approval",
+        activeTasks: "Active Tasks",
+        completedTasks: "Completed Tasks",
+        createTask: "New Task",
+        reward: "Reward",
+        dueDate: "Due Date",
+        approve: "Approve",
+        reject: "Reject",
+        categories: {
+            chores: "Chores",
+            school: "School",
+            habits: "Habits",
+            education: "Financial Education",
+        },
+        statuses: {
+            pending: "Pending",
+            approved: "Approved",
+            completed: "Completed",
+            rejected: "Rejected",
+        },
+        dialog: {
+            title: "Create New Task",
+            taskTitle: "Task Title",
+            taskTitlePlaceholder: "e.g. Clean the room",
+            child: "Child",
+            childPlaceholder: "Select a child",
+            rewardAmount: "Reward Amount (₪)",
+            dueDateLabel: "Due Date",
+            category: "Category",
+            submit: "Create Task",
+            cancel: "Cancel",
+        },
+        empty: {
+            title: "No tasks yet",
+            description: "Create a new task to get started.",
         },
     },
 }
