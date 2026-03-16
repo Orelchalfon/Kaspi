@@ -1,0 +1,1 @@
+components/dashboard/education/EducationCard.tsx(58,68): error TS2532: Object is possibly 'undefined'.
