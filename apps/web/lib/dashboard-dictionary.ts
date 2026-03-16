@@ -105,6 +105,31 @@ export type DashboardDictionary = {
             description: string
         }
     }
+    education: {
+        pageTitle: string
+        tabs: {
+            all: string
+            saving: string
+            budgeting: string
+            spending: string
+            investing: string
+        }
+        assignTo: string
+        progressTitle: string
+        emptyTitle: string
+        emptyDescription: string
+        difficulties: {
+            beginner: string
+            intermediate: string
+            advanced: string
+        }
+        types: {
+            lesson: string
+            quiz: string
+            challenge: string
+        }
+        points: string
+    }
 }
 
 
@@ -212,6 +237,31 @@ const he: DashboardDictionary = {
             title: "אין משימות עדיין",
             description: "צור משימה חדשה כדי להתחיל.",
         },
+    },
+    education: {
+        pageTitle: "חינוך פיננסי",
+        tabs: {
+            all: "הכל",
+            saving: "חיסכון",
+            budgeting: "תקצוב",
+            spending: "הוצאות",
+            investing: "השקעות",
+        },
+        assignTo: "שיוך לילד/ה",
+        progressTitle: "התקדמות אישית",
+        emptyTitle: "אין תכנים ללמידה",
+        emptyDescription: "תכני חינוך פיננסי יופיעו כאן.",
+        difficulties: {
+            beginner: "מתחיל",
+            intermediate: "בינוני",
+            advanced: "מתקדם",
+        },
+        types: {
+            lesson: "שיעור",
+            quiz: "חידון",
+            challenge: "אתגר",
+        },
+        points: "נקודות",
     },
 }
 
@@ -321,6 +371,31 @@ const en: DashboardDictionary = {
             title: "No tasks yet",
             description: "Create a new task to get started.",
         },
+    },
+    education: {
+        pageTitle: "Financial Education",
+        tabs: {
+            all: "All",
+            saving: "Saving",
+            budgeting: "Budgeting",
+            spending: "Spending",
+            investing: "Investing",
+        },
+        assignTo: "Assign to Child",
+        progressTitle: "Personal Progress",
+        emptyTitle: "No education content",
+        emptyDescription: "Financial education content will appear here.",
+        difficulties: {
+            beginner: "Beginner",
+            intermediate: "Intermediate",
+            advanced: "Advanced",
+        },
+        types: {
+            lesson: "Lesson",
+            quiz: "Quiz",
+            challenge: "Challenge",
+        },
+        points: "Points",
     },
 }
 
