@@ -3,12 +3,12 @@
 import { useSidebar } from "@/hooks/use-sidebar"
 import { Button } from "@workspace/ui/components/button"
 import {
-DropdownMenu,
-DropdownMenuContent,
-DropdownMenuItem,
-DropdownMenuLabel,
-DropdownMenuSeparator,
-DropdownMenuTrigger,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
 } from "@workspace/ui/components/dropdown-menu"
 import { cn } from "@workspace/ui/lib/utils"
 import { Bell, LogOut, Menu, Search, Settings, User } from "lucide-react"
@@ -69,6 +69,7 @@ export function Header() {
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                         <button
+                            id="user-menu-trigger"
                             type="button"
                             className={cn(
                                 "flex size-8 items-center justify-center rounded-full bg-primary/15 text-xs font-semibold text-primary ring-1 ring-primary/20 transition-colors",
