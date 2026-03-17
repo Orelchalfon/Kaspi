@@ -1,0 +1,42 @@
+---
+description: Kaspi landing page rules
+globs:
+  - "app/page.tsx"
+  - "components/landing/**"
+  - "components/shared/**"
+  - "lib/**"
+alwaysApply: false
+---
+
+# Phase 04 — Landing Page
+
+This phase is only for the public landing page at /.
+
+## Required sections
+- Navbar
+- Hero
+- Features
+- How It Works
+- Pricing
+- Testimonials
+- Footer
+
+## Requirements
+- Hebrew default content from dictionary
+- English fallback available via i18n
+- Strong visual hierarchy
+- Responsive down to 375px
+- Dark mode by default
+- Light mode toggle visible
+- Use Framer Motion for subtle section motion and staggered entrances
+
+## Do not do in this phase
+- Do not build dashboard shell
+- Do not build dashboard data pages
+- Do not add backend logic
+
+## Success criteria
+- Landing page feels complete and production-ready
+- All visible strings come from dictionary objects
+- Responsive, polished, RTL-correct implementation
+

@@ -1,0 +1,60 @@
+---
+description: Kaspi dashboard shell rules
+globs:
+  - "app/dashboard/**"
+  - "components/dashboard/**"
+  - "components/shared/**"
+  - "lib/**"
+alwaysApply: false
+---
+
+# Phase 05 — Dashboard Shell
+
+This phase is only for the shared dashboard layout and navigation shell.
+
+## Allowed scope
+- Build the `/dashboard` layout
+- Create a collapsible sidebar
+- Add active navigation states
+- Add a top header bar with:
+  - search
+  - notifications bell
+  - user avatar dropdown
+- Add medium-screen collapsed behavior
+- Add mobile drawer or sheet navigation behavior
+- Add route-ready shell for dashboard subpages
+- Add responsive dashboard spacing and layout behavior
+- Add subtle Framer Motion transitions for sidebar expand/collapse
+
+## Navigation items
+- Overview
+- Families
+- Tasks
+- Rewards
+- Transactions
+- Education
+- Subscriptions
+- Settings
+
+## Requirements
+- Must support dark mode
+- Must support RTL
+- Must feel polished and production-ready
+- Keep shell reusable across all dashboard pages
+- Use local UI state only
+- Use shared styling conventions from the project rules
+
+## Do not do in this phase
+- Do not build the actual content for overview, families, tasks, education, subscriptions, or settings
+- Do not add real notification systems
+- Do not add auth integrations
+- Do not add backend logic
+- Do not add API routes
+
+## Success criteria
+- Dashboard shell is reusable and route-ready
+- Sidebar collapses and expands correctly
+- Active navigation state is visually clear
+- Header layout works across desktop and mobile
+- Shell is responsive, RTL-correct, and polished
+

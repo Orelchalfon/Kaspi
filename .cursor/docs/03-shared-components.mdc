@@ -1,0 +1,41 @@
+---
+description: Kaspi shared UI components rules
+globs:
+  - "components/shared/**"
+  - "components/ui/**"
+  - "lib/**"
+alwaysApply: false
+---
+
+# Phase 03 — Shared Components
+
+This phase is only for reusable shared UI components.
+
+## Allowed scope
+Build these components:
+- StatCard
+- TaskCard
+- ChildAvatar
+- PlanBadge
+- StatusChip
+- SectionHeader
+
+## Component requirements
+- Fully typed props
+- RTL-aware
+- Dark-mode aware
+- Reusable and generic
+- Polished SaaS visual quality
+- Use shadcn/ui primitives when appropriate
+- Add motion only when it meaningfully improves UX
+
+## Do not do in this phase
+- Do not build full landing page sections
+- Do not build dashboard pages
+- Do not add page-specific business logic
+
+## Success criteria
+- Components live in /components/shared
+- Props APIs are clean and reusable
+- Components visually align with the Kaspi design system
+

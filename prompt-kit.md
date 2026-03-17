@@ -1,14 +1,6 @@
-# Kaspi  — Complete Prompt Kit
-
-
-
-# 0. `cursor-rules.mdc` Version (Recommended for Cursor)
-
-
-```mdc
 ---
 description: Kaspi UI-only MVP rules for Cursor
-alwaysApply: true
+alwaysApply: false
 ---
 
 # Kaspi — Cursor Rules

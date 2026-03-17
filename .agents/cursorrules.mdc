@@ -1,0 +1,269 @@
+---
+description: Kaspi UI-only MVP rules for Cursor
+alwaysApply: true
+---
+# Kaspi — Cursor Rules
+## You are building Kaspi, a UI-only MVP for a family financial literacy platform for the Israeli market.
+---
+## Source of truth  
+---
+When implementing UI, styling, or component usage, prefer these verified references first:
+- `@tailwindcss-docs`
+- `@shadcnui-docs`
+- `@nextjs-docs`
+- `@framer-motion-docs`
+If project code conflicts with a referenced doc, prefer the project codebase unless explicitly asked to refactor.
+Do not invent APIs, component props, or utility classes when the referenced docs already define them.
+
+## Product context
+Kaspi helps parents and children manage chores, rewards, balances, transactions, financial education, and subscription plans in a family-friendly interface.
+
+This phase is frontend-only and mock-data-only.
+
+---
+## Non-negotiable rules
+---
+- Use `pnpm` only. Never use npm or yarn.
+- Do not add real API calls.
+- Do not add Clerk.
+- Do not add Stripe.
+- Do not add Supabase client.
+- Do not add Prisma, Firebase, or any backend/database integration.
+- Do not add server actions that call real services.
+- All data must come only from `/lib/seed.ts`.
+- All UI interactions must work locally in memory using React state only.
+- All forms are local-only and non-persistent.
+- Do not replace the required stack with alternatives.
+- Do not introduce another component library such as MUI, Chakra, Mantine, Ant Design, or Bootstrap.
+- Do not change the design direction unless explicitly asked.
+
+---
+## Required stack
+---
+- Next.js 14+ App Router
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Framer Motion
+- Recharts
+- next-themes
+- react-hook-form
+- zod
+- next/font
+
+---
+## Package manager
+---
+Use `pnpm` exclusively.
+All shadcn components must be installed with:
+`pnpm dlx shadcn@latest add [component]`
+
+---
+## Architecture rules
+---
+- Use App Router.
+- Keep all route files in `/app`.
+- Keep reusable components in `/components`.
+- Organize components into:
+  - `/components/shared`
+  - `/components/landing`
+  - `/components/dashboard`
+  - `/components/providers`
+  - `/components/charts`
+- Use strong TypeScript types everywhere.
+- Create reusable UI abstractions rather than duplicating markup.
+- Use functional components only.
+- Prefer server components by default where possible, but use client components when needed for interactivity, local state, and Framer Motion.
+- Use descriptive names.
+- Keep pages thin and delegate UI to reusable components.
+- Put seeded mock analytics in helpers or seed modules, not inline in pages.
+
+---
+## Design system
+---
+- Brand primary: `#0F172A`
+- Accent: `#F59E0B`
+- Surface: white / dark elevated cards
+- Rounded cards: `rounded-2xl`
+- Subtle shadows
+- Glassmorphism panels where appropriate
+- Dark mode by default
+- Light mode toggle required
+- Font: Heebo via `next/font/google`
+- Mobile-first responsive design
+- Minimum supported width: 375px
+
+---
+## RTL + localization rules
+---
+- Hebrew is the default locale.
+- All visible strings must support both Hebrew and English.
+- Do not hardcode visible text directly inside page markup unless it comes from a local translation object.
+- Create `/lib/i18n.ts` with a simple dictionary for `he` and `en`.
+- Default language = `he`.
+- All layouts must fully support RTL.
+- Use RTL-safe spacing and alignment.
+- Prefer logical spacing and directional awareness.
+- All visible UI text must come from translation objects or typed label maps.
+
+---
+## UI quality rules
+---
+- The UI must look polished and production-ready.
+- Avoid placeholder-looking layouts.
+- Avoid giant empty gaps.
+- Avoid unstyled default forms and tables.
+- Build realistic SaaS-grade dashboard density, spacing, and hierarchy.
+- Every page must feel complete and intentionally designed.
+- Prioritize polished spacing, visual hierarchy, and realistic dashboard composition.
+
+## Seed data rules
+Create `/lib/seed.ts` and define:
+- typed interfaces/types for:
+  - families
+  - users
+  - tasks
+  - transactions
+  - education content
+  - subscriptions
+  - analytics
+- export the exact seeded arrays provided in the spec
+- add typed helper selectors/derived data helpers where useful
+
+All pages must import from the seed file only.
+No inline fake arrays inside pages unless derived from seed.
+
+## Shared components required
+Build these reusable components first:
+- `StatCard`
+- `TaskCard`
+- `ChildAvatar`
+- `PlanBadge`
+- `StatusChip`
+- `SectionHeader`
+
+All shared components must be:
+- typed
+- reusable
+- RTL-aware
+- theme-aware
+- visually polished
+
+## Required global features
+Every page must include:
+- skeleton loading state using shadcn Skeleton
+- empty state with helper text
+- responsive behavior down to 375px
+- bilingual support through local dictionary
+- dark mode support
+- RTL correctness
+
+## Animation rules
+Use Framer Motion for:
+- page transitions
+- staggered card entrances
+- sidebar collapse/expand
+- stat count-in feel on mount
+- hover micro-interactions
+- skeleton-to-content crossfade
+
+Animation style rules:
+- subtle, smooth, premium
+- no excessive motion
+- respect reduced motion preferences
+- prioritize performance
+- only animate where it meaningfully improves UX
+
+## Landing page requirements
+Route: `/`
+Sections:
+- Navbar
+- Hero
+- Features
+- How It Works
+- Pricing
+- Testimonials
+- Footer
+
+## Dashboard requirements
+Route: `/dashboard`
+Include:
+- collapsible sidebar
+- header bar
+- active nav states
+- mobile bottom-sheet/drawer behavior
+
+## Dashboard pages required
+- `/dashboard/overview`
+- `/dashboard/families`
+- `/dashboard/tasks`
+- `/dashboard/education`
+- `/dashboard/subscriptions`
+- `/dashboard/settings`
+
+## Page-specific expectations
+### Overview
+- 4 stat cards
+- line chart with 6 months mock data
+- recent activity feed from seed transactions
+- use typed mock analytics data
+
+### Families
+- searchable/filterable table
+- plan filter dropdown
+- clickable row opens Sheet with child profiles
+
+### Tasks
+- pending approval column
+- active tasks column
+- local approve/reject interactions
+- create task template dialog
+
+### Education
+- education content grid
+- assign-to-child popover
+- progress per child via bars
+
+### Subscriptions
+- subscriptions table
+- top summary cards
+- local-only action buttons
+
+### Settings
+- tabs layout
+- react-hook-form + zod UI-only forms
+- toggles
+- destructive danger zone section
+
+## Implementation order
+Always build in this order:
+1. scaffold project and dependencies
+2. configure Tailwind, shadcn, theme provider, Heebo font, dark mode, RTL, i18n
+3. create seed data, types, and derived helpers
+4. build shared components
+5. build landing page
+6. build dashboard shell
+7. build dashboard pages one by one
+8. do a final polish pass for responsiveness, accessibility, empty states, loading states, and animations
+
+## Output expectations
+When asked to build a step:
+- create all required files for that step
+- keep imports working
+- do not leave pseudo-code unless explicitly asked
+- ensure the project can continue incrementally without rewrites
+- preserve consistency with previous steps
+- if a step is too large, break it into smaller internal substeps while still completing the requested scope
+
+## Acceptance criteria
+The project is only considered complete if:
+- it runs with `pnpm dev`
+- no route is broken
+- no real APIs exist
+- all data comes from seed only
+- all pages are responsive
+- dark mode works
+- RTL works correctly
+- reusable components are consistently used
+- all strings come from local dictionaries
+- README includes setup with `pnpm install` and `pnpm dev`

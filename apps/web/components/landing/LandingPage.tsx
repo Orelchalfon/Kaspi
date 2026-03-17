@@ -5,6 +5,10 @@ import type { SupportedLandingLanguage } from "@/lib/landing-dictionary"
 import { getLandingDictionary } from "@/lib/landing-dictionary"
 import dynamic from "next/dynamic"
 
+const HeroScrollDemo = dynamic(
+  () => import("@/components/demo/HeroScrollDemo").then((m) => m.HeroScrollDemo),
+  { loading: () => <SectionSkeleton />, ssr: false }
+)
 /* ── Lazy-load below-the-fold sections ──────────────── */
 const Features = dynamic(
   () => import("@/components/landing/Features").then((m) => m.Features),
@@ -50,6 +54,7 @@ export function LandingPage({ lang }: LandingPageProps) {
       <Navbar dictionary={dictionary.navbar} lang={lang} />
       <main className="pt-24 space-y-0">
         <Hero dictionary={dictionary.hero} />
+        <HeroScrollDemo />
         <Features dictionary={dictionary.features} />
         <HowItWorks dictionary={dictionary.howItWorks} />
         <Pricing dictionary={dictionary.pricing} />

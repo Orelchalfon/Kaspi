@@ -1,0 +1,32 @@
+---
+description: Kaspi final polish and QA rules
+globs:
+  - "app/**"
+  - "components/**"
+  - "lib/**"
+  - "styles/**"
+alwaysApply: false
+---
+
+# Phase 12 — Final Polish
+
+This phase is only for final refinement and QA across the whole project.
+
+## Allowed scope
+
+- Audit and improve responsiveness down to 375px
+- Audit and improve RTL correctness across all routes
+- Audit and improve dark mode and light mode consistency
+- Normalize animation behavior and reduced-motion handling
+- Refine skeleton states and empty states
+- Improve typography, spacing, hierarchy, and dashboard density
+- Ensure all visible strings come from the dictionary
+- Ensure shared components are reused consistently
+- Remove dead code, duplicate markup, and inconsistent styling
+- Ensure the project runs cleanly with `pnpm dev`
+- Ensure using .agents\skills\ui-ux-pro-max.
+## Do not do in this phase
+
+- Do not introduce major new features unless needed to complete an unfinished part
+- Do not perform unnecessary rewrites of already-good sections
+- Do not introduce backend or API work

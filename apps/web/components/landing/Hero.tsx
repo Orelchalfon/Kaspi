@@ -18,7 +18,7 @@ export function Hero({ dictionary }: HeroProps) {
       id="hero"
       className="relative flex min-h-[80vh] items-center justify-center px-4 pb-16 pt-28"
     >
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.18),transparent_55%),radial-gradient(circle_at_bottom,rgba(15,23,42,0.9),#020617)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,oklch(0.488_0.243_264.376/0.18),transparent_55%),radial-gradient(circle_at_bottom,oklch(0.148_0.004_228.8/0.9),oklch(0.148_0.004_228.8))]" />
 
       <div className="mx-auto flex w-full max-w-6xl flex-col items-stretch gap-10 lg:flex-row lg:items-center">
         <div className="flex-1 space-y-6">
@@ -74,19 +74,19 @@ export function Hero({ dictionary }: HeroProps) {
                     ₪ 3,250 +
                   </p>
                 </div>
-                <div className="rounded-xl bg-emerald-500/10 px-3 py-2">
+                <div className="rounded-xl bg-chart-1/10 px-3 py-2">
                   <p className="text-[11px] text-muted-foreground">
                     עמידה ביעדים
                   </p>
-                  <p className="mt-1 text-sm font-semibold text-emerald-400">
+                  <p className="mt-1 text-sm font-semibold text-chart-1">
                     92%
                   </p>
                 </div>
-                <div className="rounded-xl bg-sky-500/10 px-3 py-2">
+                <div className="rounded-xl bg-chart-2/10 px-3 py-2">
                   <p className="text-[11px] text-muted-foreground">
                     ילדים וחיסכון
                   </p>
-                  <p className="mt-1 text-sm font-semibold text-sky-400">
+                  <p className="mt-1 text-sm font-semibold text-chart-2">
                     ₪ 850
                   </p>
                 </div>
@@ -96,14 +96,14 @@ export function Hero({ dictionary }: HeroProps) {
                 <p className="text-[11px] font-medium text-muted-foreground">
                   מגמת תזרים חודשי
                 </p>
-                <div className="h-24 rounded-xl bg-linear-to-b from-slate-900 via-slate-950 to-black p-3">
+                <div className="h-24 rounded-xl bg-linear-to-b from-muted/60 via-muted/40 to-background p-3">
                   <div className="flex h-full items-end gap-1">
-                    <div className="h-[20%] flex-1 rounded-t-sm bg-slate-700/80" />
-                    <div className="h-[45%] flex-1 rounded-t-sm bg-slate-600/80" />
-                    <div className="h-[30%] flex-1 rounded-t-sm bg-slate-700/70" />
+                    <div className="h-[20%] flex-1 rounded-t-sm bg-muted-foreground/30" />
+                    <div className="h-[45%] flex-1 rounded-t-sm bg-muted-foreground/40" />
+                    <div className="h-[30%] flex-1 rounded-t-sm bg-muted-foreground/30" />
                     <div className="h-[65%] flex-1 rounded-t-sm bg-primary/80" />
                     <div className="h-[55%] flex-1 rounded-t-sm bg-primary/70" />
-                    <div className="h-[80%] flex-1 rounded-t-sm bg-emerald-500/80" />
+                    <div className="h-[80%] flex-1 rounded-t-sm bg-chart-1/80" />
                   </div>
                 </div>
               </div>
