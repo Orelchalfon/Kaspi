@@ -1,0 +1,8 @@
+components/dashboard/Header.tsx(35,40): error TS2339: Property 'openMenu' does not exist on type '{ expandMenu: string; collapseMenu: string; }'.
+components/dashboard/Header.tsx(45,45): error TS2339: Property 'search' does not exist on type '{ expandMenu: string; collapseMenu: string; }'.
+components/dashboard/Header.tsx(63,44): error TS2339: Property 'notifications' does not exist on type '{ expandMenu: string; collapseMenu: string; }'.
+components/dashboard/Header.tsx(81,52): error TS2339: Property 'userMenu' does not exist on type '{ expandMenu: string; collapseMenu: string; }'.
+components/dashboard/Header.tsx(99,47): error TS2339: Property 'profile' does not exist on type '{ expandMenu: string; collapseMenu: string; }'.
+components/dashboard/Header.tsx(103,47): error TS2339: Property 'settings' does not exist on type '{ expandMenu: string; collapseMenu: string; }'.
+components/dashboard/Header.tsx(108,47): error TS2339: Property 'logout' does not exist on type '{ expandMenu: string; collapseMenu: string; }'.
+components/dashboard/MobileNav.tsx(73,56): error TS2339: Property 'closeMenu' does not exist on type '{ expandMenu: string; collapseMenu: string; }'.
