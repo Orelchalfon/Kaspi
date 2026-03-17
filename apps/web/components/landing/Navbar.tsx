@@ -2,7 +2,7 @@
 
 import { Menu, Moon, Sun, X } from "lucide-react"
 import { useTheme } from "next-themes"
-import { usePathname, useRouter, useSearchParams } from "next/navigation"
+import { redirect, usePathname, useRouter, useSearchParams } from "next/navigation"
 
 import type {
   LandingDictionary,
@@ -130,7 +130,9 @@ function NavbarInner({ dictionary, lang }: NavbarProps) {
               {lang === "he" ? "עברית" : "English"}
             </button>
 
-            <Button size="sm" className="hidden text-xs sm:inline-flex">
+            <Button onClick={() => {
+              redirect("/dashboard")
+            }} size="sm" className="hidden text-xs sm:inline-flex">
               {dictionary.ctaLabel}
             </Button>
 
