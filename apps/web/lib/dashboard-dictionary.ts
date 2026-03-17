@@ -130,6 +130,80 @@ export type DashboardDictionary = {
         }
         points: string
     }
+    shell: {
+        expandMenu: string
+        collapseMenu: string
+        openMenu: string
+        closeMenu: string
+        search: string
+        notifications: string
+        userMenu: string
+        profile: string
+        settings: string
+        logout: string
+    }
+    settings: {
+        pageTitle: string
+        tabs: {
+            general: string
+            notifications: string
+            team: string
+            billing: string
+        }
+        general: {
+            sectionTitle: string
+            businessName: string
+            businessNamePlaceholder: string
+            email: string
+            emailPlaceholder: string
+            timezone: string
+            language: string
+            save: string
+            savedMessage: string
+        }
+        notifications: {
+            sectionTitle: string
+            newSignup: string
+            newSignupDesc: string
+            paymentFailed: string
+            paymentFailedDesc: string
+            subscriptionCanceled: string
+            subscriptionCanceledDesc: string
+            weeklyReport: string
+            weeklyReportDesc: string
+            save: string
+            savedMessage: string
+        }
+        team: {
+            sectionTitle: string
+            inviteEmail: string
+            inviteEmailPlaceholder: string
+            role: string
+            roles: {
+                admin: string
+                viewer: string
+            }
+            invite: string
+            empty: {
+                title: string
+                description: string
+            }
+            remove: string
+        }
+        billing: {
+            sectionTitle: string
+            currentPlan: string
+            cardOnFile: string
+            dangerZone: string
+            deleteAccount: string
+            deleteWarning: string
+            dangerZoneDesc: string
+            deleteConfirmPrompt: string
+            deleteConfirmWord: string
+            deleteCancel: string
+            deleteConfirm: string
+        }
+    }
     subscriptions: {
         pageTitle: string
         summary: {
@@ -299,6 +373,80 @@ const he: DashboardDictionary = {
             challenge: "אתגר",
         },
         points: "נקודות",
+    },
+    shell: {
+        expandMenu: "הרחב תפריט",
+        collapseMenu: "כווץ תפריט",
+        openMenu: "פתח תפריט",
+        closeMenu: "סגור תפריט",
+        search: "חיפוש...",
+        notifications: "התראות",
+        userMenu: "תפריט משתמש",
+        profile: "פרופיל",
+        settings: "הגדרות",
+        logout: "התנתקות",
+    },
+    settings: {
+        pageTitle: "הגדרות",
+        tabs: {
+            general: "כללי",
+            notifications: "התראות",
+            team: "צוות",
+            billing: "חיוב",
+        },
+        general: {
+            sectionTitle: "פרטי העסק",
+            businessName: "שם העסק",
+            businessNamePlaceholder: "כתוב את שם העסק",
+            email: "כתובת אימייל",
+            emailPlaceholder: "admin@example.com",
+            timezone: "אזור זמן",
+            language: "שפה",
+            save: "שמירת שינויים",
+            savedMessage: "נשמר בהצלחה",
+        },
+        notifications: {
+            sectionTitle: "העדפות התראות",
+            newSignup: "נרשם חדש",
+            newSignupDesc: "קבל התראה כשמשתמש חדש נרשם למערכת",
+            paymentFailed: "תשלום נכשל",
+            paymentFailedDesc: "התראה על כשלון בתשלום מנוי",
+            subscriptionCanceled: "ביטול מנוי",
+            subscriptionCanceledDesc: "התראה כשלקוח מבטל את המנוי שלו",
+            weeklyReport: "דוח שבועי",
+            weeklyReportDesc: "סיכום שבועי של פעילות המערכת",
+            save: "שמירת שינויים",
+            savedMessage: "נשמר בהצלחה",
+        },
+        team: {
+            sectionTitle: "חברי צוות",
+            inviteEmail: "כתובת אימייל",
+            inviteEmailPlaceholder: "email@example.com",
+            role: "תפקיד",
+            roles: {
+                admin: "מנהל",
+                viewer: "צופה",
+            },
+            invite: "שליחת הזמנה",
+            empty: {
+                title: "אין חברי צוות",
+                description: "הזמן חברי צוות לנהל את המערכת איתך.",
+            },
+            remove: "הסר",
+        },
+        billing: {
+            sectionTitle: "תוכנית וחיוב",
+            currentPlan: "התוכנית הנוכחית שלך",
+            cardOnFile: "אמצעי תשלום",
+            dangerZone: "אזור סכנה",
+            deleteAccount: "מחיקת חשבון",
+            deleteWarning: "פעולה זו בלתי הפיכה. היא תמחק לצמיתות את החשבון שלך ואת כל הנתונים המקושרים אליו.",
+            dangerZoneDesc: "לא ניתן לשחזר נתונים לאחר מחיקת החשבון.",
+            deleteConfirmPrompt: "כדי לאשר, הקלד 'DELETE' לתוך התיבה למטה:",
+            deleteConfirmWord: "DELETE",
+            deleteCancel: "ביטול",
+            deleteConfirm: "מחק חשבון תמידית",
+        },
     },
     subscriptions: {
         pageTitle: "מנויים",
@@ -470,6 +618,80 @@ const en: DashboardDictionary = {
             challenge: "Challenge",
         },
         points: "Points",
+    },
+    shell: {
+        expandMenu: "Expand menu",
+        collapseMenu: "Collapse menu",
+        openMenu: "Open menu",
+        closeMenu: "Close menu",
+        search: "Search...",
+        notifications: "Notifications",
+        userMenu: "User menu",
+        profile: "Profile",
+        settings: "Settings",
+        logout: "Log out",
+    },
+    settings: {
+        pageTitle: "Settings",
+        tabs: {
+            general: "General",
+            notifications: "Notifications",
+            team: "Team",
+            billing: "Billing",
+        },
+        general: {
+            sectionTitle: "Business Details",
+            businessName: "Business Name",
+            businessNamePlaceholder: "Enter business name",
+            email: "Email Address",
+            emailPlaceholder: "admin@example.com",
+            timezone: "Timezone",
+            language: "Language",
+            save: "Save Changes",
+            savedMessage: "Saved successfully",
+        },
+        notifications: {
+            sectionTitle: "Notification Preferences",
+            newSignup: "New Signup",
+            newSignupDesc: "Get notified when a new user signs up",
+            paymentFailed: "Payment Failed",
+            paymentFailedDesc: "Alert for a failed subscription payment",
+            subscriptionCanceled: "Subscription Canceled",
+            subscriptionCanceledDesc: "Alert when a customer cancels their subscription",
+            weeklyReport: "Weekly Report",
+            weeklyReportDesc: "Weekly summary of system activity",
+            save: "Save Changes",
+            savedMessage: "Saved successfully",
+        },
+        team: {
+            sectionTitle: "Team Members",
+            inviteEmail: "Email Address",
+            inviteEmailPlaceholder: "email@example.com",
+            role: "Role",
+            roles: {
+                admin: "Admin",
+                viewer: "Viewer",
+            },
+            invite: "Send Invite",
+            empty: {
+                title: "No team members",
+                description: "Invite team members to manage the system with you.",
+            },
+            remove: "Remove",
+        },
+        billing: {
+            sectionTitle: "Plan & Billing",
+            currentPlan: "Your current plan",
+            cardOnFile: "Payment Method",
+            dangerZone: "Danger Zone",
+            deleteAccount: "Delete Account",
+            deleteWarning: "This action is irreversible. It will permanently delete your account and all associated data.",
+            dangerZoneDesc: "Data cannot be recovered once the account is deleted.",
+            deleteConfirmPrompt: "To confirm, type 'DELETE' in the box below:",
+            deleteConfirmWord: "DELETE",
+            deleteCancel: "Cancel",
+            deleteConfirm: "Permanently Delete Account",
+        },
     },
     subscriptions: {
         pageTitle: "Subscriptions",

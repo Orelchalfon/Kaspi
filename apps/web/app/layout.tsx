@@ -1,14 +1,9 @@
 import { ThemeProvider } from "@/components/theme-provider"
 import "@workspace/ui/globals.css"
 import { cn } from "@workspace/ui/lib/utils"
-import { Heebo } from "next/font/google"
+import { Heebo, Inter } from "next/font/google"
 
-const heebo = Heebo({
-  subsets: ["latin", "hebrew"],
-  variable: "--font-sans",
-  display: "swap",       // show fallback text instantly while font loads
-  preload: true,
-})
+const inter = Inter({subsets:['latin'],variable:'--font-sans'})
 
 export default function RootLayout({
   children,
@@ -20,7 +15,7 @@ export default function RootLayout({
       lang="he"
       dir="rtl"
       suppressHydrationWarning
-      className={cn("antialiased", heebo.variable)}
+      className={cn("antialiased", "font-sans", inter.variable)}
     >
       <body className="font-sans">
         <ThemeProvider>{children}</ThemeProvider>
