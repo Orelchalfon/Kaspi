@@ -6,6 +6,7 @@ import { dashboardNavItems } from "@/lib/dashboard-nav"
 import { cn } from "@workspace/ui/lib/utils"
 import { motion } from "framer-motion"
 import { PanelLeftClose, PanelLeftOpen } from "lucide-react"
+import { getDashboardDictionary } from "@/lib/dashboard-dictionary"
 
 /* ── Constants ──────────────────────────────────────── */
 
@@ -16,6 +17,7 @@ const SIDEBAR_WIDTH_COLLAPSED = 72 // 4.5rem
 
 export function Sidebar() {
     const { isCollapsed, toggleSidebar } = useSidebar()
+    const dict = getDashboardDictionary()
 
     return (
         <motion.aside
@@ -62,14 +64,14 @@ export function Sidebar() {
                         "cursor-pointer",
                         isCollapsed && "justify-center px-0"
                     )}
-                    aria-label={isCollapsed ? "הרחב תפריט" : "צמצם תפריט"}
+                    aria-label={isCollapsed ? dict.shell.expandMenu : dict.shell.collapseMenu}
                 >
                     {isCollapsed ? (
                         <PanelLeftOpen className="size-[18px] shrink-0 rtl:scale-x-[-1]" />
                     ) : (
                         <>
                             <PanelLeftClose className="size-[18px] shrink-0 rtl:scale-x-[-1]" />
-                            <span className="truncate">צמצם תפריט</span>
+                            <span className="truncate">{dict.shell.collapseMenu}</span>
                         </>
                     )}
                 </button>

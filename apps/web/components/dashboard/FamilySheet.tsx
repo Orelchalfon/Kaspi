@@ -38,11 +38,6 @@ const taskStatusIcons = {
     completed: <CheckCircle2 className="size-3.5 text-emerald-500" />,
 }
 
-const taskStatusLabels: Record<string, string> = {
-    pending: "ממתין",
-    approved: "אושר",
-    completed: "הושלם",
-}
 
 /* ── Component ─────────────────────────────────────────── */
 
