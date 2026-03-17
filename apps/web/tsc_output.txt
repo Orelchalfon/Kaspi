@@ -1,0 +1,14 @@
+app/dashboard/settings/page.tsx(9,58): error TS2307: Cannot find module '@workspace/ui/tabs' or its corresponding type declarations.
+components/dashboard/settings/SettingsBillingTab.tsx(13,8): error TS2307: Cannot find module '@workspace/ui/alert-dialog' or its corresponding type declarations.
+components/dashboard/settings/SettingsBillingTab.tsx(14,24): error TS2307: Cannot find module '@workspace/ui/button' or its corresponding type declarations.
+components/dashboard/settings/SettingsBillingTab.tsx(15,23): error TS2307: Cannot find module '@workspace/ui/input' or its corresponding type declarations.
+components/dashboard/settings/SettingsGeneralTab.tsx(4,24): error TS2307: Cannot find module '@workspace/ui/button' or its corresponding type declarations.
+components/dashboard/settings/SettingsGeneralTab.tsx(5,23): error TS2307: Cannot find module '@workspace/ui/input' or its corresponding type declarations.
+components/dashboard/settings/SettingsGeneralTab.tsx(6,23): error TS2307: Cannot find module '@workspace/ui/label' or its corresponding type declarations.
+components/dashboard/settings/SettingsNotificationsTab.tsx(3,24): error TS2307: Cannot find module '@workspace/ui/button' or its corresponding type declarations.
+components/dashboard/settings/SettingsNotificationsTab.tsx(4,24): error TS2307: Cannot find module '@workspace/ui/switch' or its corresponding type declarations.
+components/dashboard/settings/SettingsSkeleton.tsx(1,26): error TS2307: Cannot find module '@repo/ui/skeleton' or its corresponding type declarations.
+components/dashboard/settings/SettingsTeamTab.tsx(4,24): error TS2307: Cannot find module '@workspace/ui/button' or its corresponding type declarations.
+components/dashboard/settings/SettingsTeamTab.tsx(5,23): error TS2307: Cannot find module '@workspace/ui/input' or its corresponding type declarations.
+components/dashboard/settings/SettingsTeamTab.tsx(6,23): error TS2307: Cannot find module '@workspace/ui/label' or its corresponding type declarations.
+components/dashboard/settings/SettingsTeamTab.tsx(71,23): error TS2532: Object is possibly 'undefined'.

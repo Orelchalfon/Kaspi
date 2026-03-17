@@ -12,11 +12,13 @@ import {
 } from "@workspace/ui/components/dropdown-menu"
 import { cn } from "@workspace/ui/lib/utils"
 import { Bell, LogOut, Menu, Search, Settings, User } from "lucide-react"
+import { getDashboardDictionary } from "@/lib/dashboard-dictionary"
 
 /* ── Component ──────────────────────────────────────── */
 
 export function Header() {
     const { toggleMobile, isCollapsed } = useSidebar()
+    const dict = getDashboardDictionary()
 
     return (
         <header
@@ -30,7 +32,7 @@ export function Header() {
                 size="icon-sm"
                 className="lg:hidden"
                 onClick={toggleMobile}
-                aria-label="פתח תפריט ניווט"
+                aria-label={dict.shell.openMenu}
             >
                 <Menu className="size-5" />
             </Button>
@@ -40,7 +42,7 @@ export function Header() {
                 <Search className="pointer-events-none absolute start-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
                 <input
                     type="search"
-                    placeholder="חיפוש..."
+                    placeholder={dict.shell.search}
                     className={cn(
                         "h-9 w-full rounded-lg border border-input bg-background/60 ps-9 pe-3 text-sm text-foreground placeholder:text-muted-foreground",
                         "outline-none transition-colors focus:border-ring focus:ring-2 focus:ring-ring/30"
@@ -58,7 +60,7 @@ export function Header() {
                     variant="ghost"
                     size="icon-sm"
                     className="relative"
-                    aria-label="התראות"
+                    aria-label={dict.shell.notifications}
                 >
                     <Bell className="size-[18px]" />
                     {/* Unread badge */}
@@ -66,7 +68,7 @@ export function Header() {
                 </Button>
 
                 {/* User dropdown */}
-                <DropdownMenu>
+                <DropdownMenu dir="rtl">
                     <DropdownMenuTrigger asChild>
                         <button
                             id="user-menu-trigger"
@@ -76,7 +78,7 @@ export function Header() {
                                 "hover:bg-primary/25 focus-visible:ring-2 focus-visible:ring-primary/50",
                                 "cursor-pointer outline-none"
                             )}
-                            aria-label="תפריט משתמש"
+                            aria-label={dict.shell.userMenu}
                         >
                             OC
                         </button>
@@ -94,16 +96,16 @@ export function Header() {
                         <DropdownMenuSeparator />
                         <DropdownMenuItem>
                             <User className="size-4" />
-                            <span>פרופיל</span>
+                            <span>{dict.shell.profile}</span>
                         </DropdownMenuItem>
                         <DropdownMenuItem>
                             <Settings className="size-4" />
-                            <span>הגדרות</span>
+                            <span>{dict.shell.settings}</span>
                         </DropdownMenuItem>
                         <DropdownMenuSeparator />
                         <DropdownMenuItem variant="destructive">
                             <LogOut className="size-4" />
-                            <span>התנתקות</span>
+                            <span>{dict.shell.logout}</span>
                         </DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>

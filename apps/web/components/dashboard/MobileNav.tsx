@@ -7,6 +7,7 @@ import { cn } from "@workspace/ui/lib/utils"
 import { AnimatePresence, motion } from "framer-motion"
 import { X } from "lucide-react"
 import { useEffect, useState } from "react"
+import { getDashboardDictionary } from "@/lib/dashboard-dictionary"
 
 /* ── Helpers ────────────────────────────────────────── */
 
@@ -23,6 +24,7 @@ function useIsRtl() {
 export function MobileNav() {
     const { isMobileOpen, setMobileOpen } = useSidebar()
     const isRtl = useIsRtl()
+    const dict = getDashboardDictionary()
 
     /* In RTL end-0 = left side, so the drawer slides from -100% (visual-left offscreen) */
     const offscreenX = isRtl ? "-100%" : "100%"
@@ -68,7 +70,7 @@ export function MobileNav() {
                                 type="button"
                                 onClick={() => setMobileOpen(false)}
                                 className="flex size-8 items-center justify-center rounded-lg text-sidebar-foreground/60 transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground cursor-pointer"
-                                aria-label="סגור תפריט"
+                                aria-label={dict.shell.closeMenu}
                             >
                                 <X className="size-5" />
                             </button>
