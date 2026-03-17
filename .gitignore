@@ -22,7 +22,7 @@ coverage
 .vercel
 
 # Build Outputs
-*.next/
+.next/
 out/
 build
 dist
@@ -36,3 +36,4 @@ npm-debug.log*
 *.pem
 .agents
 .cursor
+claude.md
