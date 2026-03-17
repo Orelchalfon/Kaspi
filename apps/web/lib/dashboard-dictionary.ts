@@ -130,6 +130,43 @@ export type DashboardDictionary = {
         }
         points: string
     }
+    subscriptions: {
+        pageTitle: string
+        summary: {
+            totalMrr: string
+            activeSubs: string
+            churned: string
+        }
+        columns: {
+            family: string
+            plan: string
+            status: string
+            billingDate: string
+            amount: string
+            actions: string
+        }
+        plans: {
+            free: string
+            standard: string
+            premium: string
+        }
+        statuses: {
+            trialing: string
+            active: string
+            past_due: string
+            canceled: string
+        }
+        actions: {
+            cancel: string
+            upgrade: string
+            downgrade: string
+            canceled: string
+        }
+        empty: {
+            title: string
+            description: string
+        }
+    }
 }
 
 
@@ -262,6 +299,43 @@ const he: DashboardDictionary = {
             challenge: "אתגר",
         },
         points: "נקודות",
+    },
+    subscriptions: {
+        pageTitle: "מנויים",
+        summary: {
+            totalMrr: "הכנסה חודשית חוזרת",
+            activeSubs: "מנויים פעילים",
+            churned: "ביטולים החודש",
+        },
+        columns: {
+            family: "משפחה",
+            plan: "מנוי",
+            status: "סטטוס",
+            billingDate: "תאריך חיוב",
+            amount: "סכום",
+            actions: "פעולות",
+        },
+        plans: {
+            free: "חינמי",
+            standard: "רגיל",
+            premium: "פרמיום",
+        },
+        statuses: {
+            trialing: "ניסיון",
+            active: "פעיל",
+            past_due: "באיחור",
+            canceled: "בוטל",
+        },
+        actions: {
+            cancel: "ביטול",
+            upgrade: "שדרוג",
+            downgrade: "הורדת דרגה",
+            canceled: "בוטל",
+        },
+        empty: {
+            title: "אין מנויים עדיין",
+            description: "מנויים של משפחות יופיעו כאן.",
+        },
     },
 }
 
@@ -396,6 +470,43 @@ const en: DashboardDictionary = {
             challenge: "Challenge",
         },
         points: "Points",
+    },
+    subscriptions: {
+        pageTitle: "Subscriptions",
+        summary: {
+            totalMrr: "Monthly Recurring Revenue",
+            activeSubs: "Active Subscriptions",
+            churned: "Churned This Month",
+        },
+        columns: {
+            family: "Family",
+            plan: "Plan",
+            status: "Status",
+            billingDate: "Billing Date",
+            amount: "Amount",
+            actions: "Actions",
+        },
+        plans: {
+            free: "Free",
+            standard: "Standard",
+            premium: "Premium",
+        },
+        statuses: {
+            trialing: "Trialing",
+            active: "Active",
+            past_due: "Past Due",
+            canceled: "Canceled",
+        },
+        actions: {
+            cancel: "Cancel",
+            upgrade: "Upgrade",
+            downgrade: "Downgrade",
+            canceled: "Canceled",
+        },
+        empty: {
+            title: "No subscriptions yet",
+            description: "Family subscriptions will appear here.",
+        },
     },
 }
 
